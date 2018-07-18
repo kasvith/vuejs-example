@@ -18,9 +18,4 @@ app.post('/api/capitalize', (req, res) => {
     return res.json({text: uppercase}) 
 })
 
-app.use('*', (req, res) => {
-    res.status(404)
-    return res.json({message: 'not found'})
-})
-
 app.listen(3000, () => { console.log('app is running on port 3000') })
